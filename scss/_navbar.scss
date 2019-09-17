@@ -37,12 +37,13 @@
     transition: background-color 0.3s ease-in-out;
     .navbar-brand {
       padding: .5rem 0;
-      color: fade-out($white, .5);
+      color: fade-out($white, 0);
     }
     .nav-link {
       transition: none;
       padding: 2rem 1.5rem;
-      color: fade-out($white, .5);
+      // changed fadeout default to O on both brand & link nav classes kept it as fade-out because that's cool option to change
+      color: fade-out($white, 0);
       &:hover {
         color: fade-out($white, .25);
       }
