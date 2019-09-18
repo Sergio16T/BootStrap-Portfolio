@@ -121,6 +121,9 @@
   .about-section p {
     margin-bottom: 5rem;
     color: rgba(255, 255, 255, 0.9) !important; }
+  .about-section #intro-p {
+    color: white;
+    font-size: 1.25rem; }
 
 .projects-section {
   padding: 10rem 0; }
