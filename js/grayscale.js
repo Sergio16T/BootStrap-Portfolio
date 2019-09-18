@@ -1,7 +1,7 @@
 (function($) {
   "use strict"; // Start of use strict
 
-  // Smooth scrolling using jQuery easing
+  // Smooth scrolling using jQuery easing. Edited timeout to take longer
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -9,7 +9,7 @@
       if (target.length) {
         $('html, body').animate({
           scrollTop: (target.offset().top - 70)
-        }, 1000, "easeInOutExpo");
+        }, 1750, "easeInOutExpo");
         return false;
       }
     }
@@ -40,3 +40,13 @@
   $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
+
+//above code came with template -- below code I am adding 
+let arrow = document.getElementById('arrow');
+let aboutMeButton = document.querySelector('.btn'); 
+
+aboutMeButton.addEventListener("click", rotateArrow); 
+
+function rotateArrow() {
+  arrow.classList.add('btn-active'); 
+}
