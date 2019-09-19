@@ -43,10 +43,15 @@
 
 //above code came with template -- below code I am adding 
 let arrow = document.getElementById('arrow');
-let aboutMeButton = document.querySelector('.btn'); 
+let aboutMeButton = document.querySelector('.btn');
+let welcome = document.querySelector('.navbar-brand');
 
 aboutMeButton.addEventListener("click", rotateArrow); 
+welcome.addEventListener("click", resetArrow); 
 
 function rotateArrow() {
-  arrow.classList.add('btn-active'); 
+  arrow.classList.add('btn-active');
+}
+function resetArrow(){
+  arrow.classList.remove('btn-active'); 
 }
