@@ -42,16 +42,34 @@
 })(jQuery); // End of use strict
 
 //above code came with template -- below code I am adding 
+
 let arrow = document.getElementById('arrow');
 let aboutMeButton = document.querySelector('.btn');
-let welcome = document.querySelector('.navbar-brand');
+let click =0; 
 
-aboutMeButton.addEventListener("click", rotateArrow); 
-welcome.addEventListener("click", resetArrow); 
+aboutMeButton.addEventListener("click", rotateCollapse);
+aboutMeButton.addEventListener("mouseover", rotateArrow);
+aboutMeButton.addEventListener("mouseout", resetArrow);
+ 
 
+function rotateCollapse() {
+  click += 1; 
+  arrow.classList.add('btn-active');
+  aboutMeButton.style.backgroundColor = '#325351'; 
+  setTimeout(function(){
+    arrow.classList.remove('btn-active');
+    aboutMeButton.style.backgroundColor = '#64a19d'; 
+    click = 0; 
+  },1750); 
+}  
 function rotateArrow() {
   arrow.classList.add('btn-active');
+  aboutMeButton.style.backgroundColor = '#325351'; 
 }
+
 function resetArrow(){
-  arrow.classList.remove('btn-active'); 
+  if (click == 0) {
+    arrow.classList.remove('btn-active');
+    aboutMeButton.style.backgroundColor = '#64a19d'; 
+  }
 }

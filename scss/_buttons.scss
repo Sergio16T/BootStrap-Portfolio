@@ -9,18 +9,22 @@
 }
 
 .btn-primary {
-  background-color: $primary;
+  background-color: $primary; 
+  /*
   &:hover {
     background-color: darken($primary, 25%);
-  }
+  } 
   &:focus {
     background-color: darken($primary, 10%);
     color: white;
-  }
+  } 
   &:active {
     background-color: darken($primary, 15%) !important;
-  }
+  }  */
   .btn-active {
-    transform:rotate(90deg); 
+    transform:rotate(90deg);
+    color:white;  
   }
+  
+  
 }

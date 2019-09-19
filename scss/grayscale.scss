@@ -15,12 +15,13 @@ body {
 
 a {
   color: $primary;
-  &:focus,
+  //&:focus,
   &:hover {
     text-decoration: none;
     color: darken($primary, 20%);
-  }
-}
+  } 
+} 
+
 
 .bg-black {
   background-color: $black !important;
